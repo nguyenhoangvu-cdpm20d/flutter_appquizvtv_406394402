@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_appquizvtv_406394402/views/addquestion.dart';
 import 'package:flutter_appquizvtv_406394402/views/create_quiz.dart';
+import 'package:flutter_appquizvtv_406394402/views/home.dart';
 import 'package:flutter_appquizvtv_406394402/views/signin.dart';
 import 'package:flutter_appquizvtv_406394402/views/signup.dart';
 
@@ -18,7 +19,7 @@ class QuizVTVApp extends StatelessWidget {
         primarySwatch: Colors.pink,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: AddQuestion(),
+      home: SignIn(),
     );
   }
 }

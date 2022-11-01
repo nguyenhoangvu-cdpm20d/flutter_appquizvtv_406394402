@@ -83,7 +83,7 @@ class _CreateQuizState extends State<CreateQuiz> {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) => SignIn()));
                 },
-                child: blueButton(context, "Thêm câu hỏi"),
+                child: blueButton(context, "Thêm trắc nghiệm"),
               ),
               SizedBox(
                 height: 80,

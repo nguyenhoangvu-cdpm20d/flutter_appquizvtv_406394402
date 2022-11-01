@@ -91,10 +91,53 @@ class _AddQuestionState extends State<AddQuestion> {
                 option4 = val;
               },
             ),
-            Spacer(),
-            Row(),
             SizedBox(
-              height: 6,
+              height: 10,
+            ),
+            Spacer(),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: MediaQuery.of(context).size.width / 2 - 20,
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                    decoration: BoxDecoration(
+                        color: Colors.pink,
+                        borderRadius: BorderRadius.circular(30)),
+                    child: Text(
+                      "Gửi",
+                      style: TextStyle(fontSize: 16, color: Colors.white),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 40,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    //uploadQuizData();
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: MediaQuery.of(context).size.width / 2 - 20,
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                    decoration: BoxDecoration(
+                        color: Colors.pink,
+                        borderRadius: BorderRadius.circular(30)),
+                    child: Text(
+                      "Thêm câu hỏi",
+                      style: TextStyle(fontSize: 16, color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 60,
             ),
           ],
         ),
