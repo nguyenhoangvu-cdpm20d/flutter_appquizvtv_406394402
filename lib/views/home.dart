@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors_in_immutables
-
 import 'package:flutter/material.dart';
 import 'package:flutter_appquizvtv_406394402/views/create_quiz.dart';
+import 'package:flutter_appquizvtv_406394402/views/signin.dart';
 import 'package:flutter_appquizvtv_406394402/widgets/widgets.dart';
 
 class Home extends StatefulWidget {
@@ -12,7 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  late Stream quizStream;
+  Stream? quizStream;
   Widget quizList() {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 24),
@@ -41,9 +40,78 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: appBar(context),
+        foregroundColor: Colors.pink,
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         brightness: Brightness.light,
+      ),
+      endDrawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: CircleAvatar(
+                child: Text(
+                  '',
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.home,
+                color: Colors.black,
+              ),
+              title: Text(
+                'Trang chủ',
+                style: TextStyle(fontSize: 20),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.play_arrow,
+                color: Colors.black,
+              ),
+              title: Text(
+                'Chơi ngay',
+                style: TextStyle(fontSize: 20),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.account_box,
+                color: Colors.black,
+              ),
+              title: Text(
+                'Trang cá nhân',
+                style: TextStyle(fontSize: 20),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            SizedBox(height: 30),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'Đăng xuất',
+                style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.pink,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
       body: quizList(),
       floatingActionButton: FloatingActionButton(
